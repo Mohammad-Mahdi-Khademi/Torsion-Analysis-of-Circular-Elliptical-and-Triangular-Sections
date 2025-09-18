@@ -1,0 +1,1682 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(0.0, 
+    10.0), point2=(0.0, 6.25))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(10.0, 
+    0.0), point2=(18.75, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-20.0, -10.0), 
+    point2=(0.0, 27.5))
+mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 27.5), point2=(
+    30.0, -10.0))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(30.0, -10.0), 
+    point2=(-20.0, -10.0))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6])
+mdb.models['Model-1'].sketches['__profile__'].HorizontalDimension(textPoint=(
+    -8.26486206054688, -19.2115745544434), value=160.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    23.1136169433594, 26.0578804016113), value=178.89, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=360.0)
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(0.0, 
+    17.5), point2=(0.0, 10.0))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(15.0, 
+    0.0), point2=(42.5, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-60.0, -37.5), 
+    point2=(0.0, 50.0))
+mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 50.0), point2=(
+    67.5, -40.0))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(67.5, -40.0), 
+    point2=(-60.0, -37.5))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6])
+mdb.models['Model-1'].sketches['__profile__'].HorizontalDimension(textPoint=(
+    32.0228729248047, -50.9281387329102), value=160.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    49.4211273193359, 42.6287422180176), value=178.89, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].sketches['__profile__'].EqualLengthConstraint(entity1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4])
+mdb.models['Model-1'].sketches['__profile__'].DistanceDimension(entity1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3], textPoint=(
+    -19.6969261169434, -22.1925735473633), value=0.0)
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseSolidExtrude(depth=100.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].features['Solid extrude-1'].setValues(
+    depth=1000.0)
+mdb.models['Model-1'].parts['Part-1'].regenerate()
+mdb.models['Model-1'].parts['Part-1'].regenerate()
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=360.0)
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(0.0, 
+    15.0), point2=(0.0, 7.5))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(12.5, 
+    0.0), point2=(30.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-70.0, 0.0), point2=
+    (73.6273956298828, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4])
+mdb.models['Model-1'].sketches['__profile__'].ParallelConstraint(addUndoState=
+    False, entity1=mdb.models['Model-1'].sketches['__profile__'].geometry[3], 
+    entity2=mdb.models['Model-1'].sketches['__profile__'].geometry[4])
+mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(73.6273956298828, 
+    0.0), point2=(0.0, 60.0))
+mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 60.0), point2=(
+    -70.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-55.0, -32.5), 
+    point2=(60.0, -32.5))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(60.0, -32.5), 
+    point2=(0.0, 55.0))
+mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 55.0), point2=(
+    -55.0, -32.5))
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -14.1203155517578, -8.92814254760742), value=160.0, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    57.7420349121094, 48.4131813049316), value=178.89, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[2])
+mdb.models['Model-1'].sketches['__profile__'].EqualLengthConstraint(entity1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5])
+mdb.models['Model-1'].sketches['__profile__'].DistanceDimension(entity1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3], textPoint=(0.0, 
+    0.0), value=0.0)
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Left Grip', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Left Grip'].BaseShellExtrude(depth=100.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=360.0)
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(0.0, 
+    15.0), point2=(0.0, 7.5))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].ConstructionLine(point1=(17.5, 
+    0.0), point2=(30.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 50.0), point2=(
+    -50.0, -32.5))
+mdb.models['Model-1'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-50.0, -32.5), 
+    point2=(60.0, -32.5))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(60.0, -32.5), 
+    point2=(0.0, 50.0))
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-1', toName='Triangle Bar')
+mdb.models['Model-1'].Part(name='Right Grip', objectToCopy=
+    mdb.models['Model-1'].parts['Left Grip'])
+mdb.models['Model-1'].Material(name='ASTM 36A')
+mdb.models['Model-1'].materials['ASTM 36A'].Elastic(table=((210000000000.0, 
+    0.3), ))
+mdb.models['Model-1'].HomogeneousSolidSection(material='ASTM 36A', name=
+    'Section-1', thickness=None)
+mdb.models['Model-1'].HomogeneousShellSection(idealization=NO_IDEALIZATION, 
+    integrationRule=SIMPSON, material='ASTM 36A', name='Section-2', 
+    nodalThicknessField='', numIntPts=5, poissonDefinition=DEFAULT, 
+    preIntegrate=OFF, temperature=GRADIENT, thickness=1.0, thicknessField='', 
+    thicknessModulus=None, thicknessType=UNIFORM, useDensity=OFF)
+mdb.models['Model-1'].parts['Right Grip'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=Region(
+    faces=mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), sectionName='Section-2', thicknessAssignment=
+    FROM_SECTION)
+mdb.models['Model-1'].parts['Left Grip'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=Region(
+    faces=mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), sectionName='Section-2', thicknessAssignment=
+    FROM_SECTION)
+mdb.models['Model-1'].parts['Triangle Bar'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=Region(
+    cells=mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask(
+    mask=('[#1 ]', ), )), sectionName='Section-1', thicknessAssignment=
+    FROM_SECTION)
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Left Grip-1', 
+    part=mdb.models['Model-1'].parts['Left Grip'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Right Grip-1', 
+    part=mdb.models['Model-1'].parts['Right Grip'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Triangle Bar-1'
+    , part=mdb.models['Model-1'].parts['Triangle Bar'])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Right Grip-1', ), 
+    vector=(0.0, 0.0, 1000.0))
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Right Grip-1', ), 
+    vector=(0.0, 0.0, -100.0))
+mdb.models['Model-1'].Tie(adjust=ON, main=Region(
+    side1Faces=mdb.models['Model-1'].rootAssembly.instances['Triangle Bar-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), name='Constraint-1', positionToleranceMethod=COMPUTED
+    , secondary=Region(
+    side1Faces=mdb.models['Model-1'].rootAssembly.instances['Left Grip-1'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), thickness=ON, tieRotations=ON)
+mdb.models['Model-1'].Tie(adjust=ON, main=Region(
+    side1Faces=mdb.models['Model-1'].rootAssembly.instances['Triangle Bar-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), name='Constraint-2', positionToleranceMethod=COMPUTED
+    , secondary=Region(
+    side1Faces=mdb.models['Model-1'].rootAssembly.instances['Right Grip-1'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), thickness=ON, tieRotations=ON)
+mdb.models['Model-1'].rootAssembly.ReferencePoint(point=(0.0, 0.0, 0.0))
+del mdb.models['Model-1'].rootAssembly.features['RP-1']
+mdb.models['Model-1'].rootAssembly.DatumAxisByPrincipalAxis(principalAxis=
+    XAXIS)
+mdb.models['Model-1'].rootAssembly.DatumAxisByPrincipalAxis(principalAxis=
+    YAXIS)
+mdb.models['Model-1'].rootAssembly.DatumAxisByPrincipalAxis(principalAxis=
+    ZAXIS)
+del mdb.models['Model-1'].rootAssembly.features['Datum axis-3']
+del mdb.models['Model-1'].rootAssembly.features['Datum axis-1']
+del mdb.models['Model-1'].rootAssembly.features['Datum axis-2']
+mdb.models['Model-1'].rootAssembly.ReferencePoint(point=(0.0, 53.3, 0.0))
+mdb.models['Model-1'].rootAssembly.ReferencePoint(point=(1000.0, 53.3, 0.0))
+del mdb.models['Model-1'].rootAssembly.features['RP-2']
+mdb.models['Model-1'].rootAssembly.ReferencePoint(point=(0.0, 53.3, 1000.0))
+mdb.models['Model-1'].RigidBody(bodyRegion=Region(
+    faces=mdb.models['Model-1'].rootAssembly.instances['Left Grip-1'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), name='Constraint-3', refPointRegion=Region(
+    referencePoints=(mdb.models['Model-1'].rootAssembly.referencePoints[16], 
+    )))
+mdb.models['Model-1'].RigidBody(bodyRegion=Region(
+    faces=mdb.models['Model-1'].rootAssembly.instances['Right Grip-1'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), name='Constraint-4', refPointRegion=Region(
+    referencePoints=(mdb.models['Model-1'].rootAssembly.referencePoints[18], 
+    )))
+mdb.models['Model-1'].Coupling(alpha=0.0, controlPoint=Region(
+    vertices=mdb.models['Model-1'].rootAssembly.instances['Right Grip-1'].vertices.getSequenceFromMask(
+    mask=('[#3f ]', ), ), referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[18], )), couplingType=
+    KINEMATIC, influenceRadius=WHOLE_SURFACE, localCsys=None, name=
+    'Constraint-5', surface=Region(
+    side2Faces=mdb.models['Model-1'].rootAssembly.instances['Right Grip-1'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), u1=ON, u2=ON, u3=ON, ur1=ON, ur2=ON, ur3=ON)
+del mdb.models['Model-1'].constraints['Constraint-5']
+mdb.models['Model-1'].Coupling(alpha=0.0, controlPoint=Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[18], )), couplingType=
+    KINEMATIC, influenceRadius=WHOLE_SURFACE, localCsys=None, name=
+    'Constraint-5', surface=Region(
+    side2Faces=mdb.models['Model-1'].rootAssembly.instances['Right Grip-1'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), u1=ON, u2=ON, u3=ON, ur1=ON, ur2=ON, ur3=ON)
+mdb.models['Model-1'].Coupling(alpha=0.0, controlPoint=Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[16], )), couplingType=
+    KINEMATIC, influenceRadius=WHOLE_SURFACE, localCsys=None, name=
+    'Constraint-6', surface=Region(
+    side2Faces=mdb.models['Model-1'].rootAssembly.instances['Left Grip-1'].faces.getSequenceFromMask(
+    mask=('[#7 ]', ), )), u1=ON, u2=ON, u3=ON, ur1=ON, ur2=ON, ur3=ON)
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'BC-1', region=Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[16], )), u1=UNSET, u2=
+    UNSET, u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=10.0)
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'BC-2', region=Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[18], )), u1=UNSET, u2=
+    UNSET, u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=-10.0)
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'BC-3', region=Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[16], 
+    mdb.models['Model-1'].rootAssembly.referencePoints[18], )), u1=0.0, u2=0.0, 
+    u3=0.0, ur1=0.0, ur2=0.0, ur3=UNSET)
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=20)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=18.0)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=18.0)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].setMeshControls(elemShape=TET, 
+    regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].parts['Triangle Bar'].setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].setMeshControls(elemShape=TRI, 
+    regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].setMeshControls(elemShape=TRI, 
+    regions=mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask(
+    ('[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-1', nodalOutputPrecision=SINGLE, 
+    numCpus=6, numDomains=6, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '1681 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '270 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\temp\\Job-1.odb', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 12448, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 233.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 47.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Mon Aug 11 14:51:45 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].setMeshControls(elemShape=QUAD, 
+    regions=mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask(
+    ('[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].setMeshControls(elemShape=QUAD, 
+    regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].setMeshControls(elemShape=HEX, 
+    regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ), technique=STRUCTURED)
+mdb.models['Model-1'].parts['Triangle Bar'].setElementType(elemTypes=(ElemType(
+    elemCode=C3D8R, elemLibrary=STANDARD), ElemType(elemCode=C3D6, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D4, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '441 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\temp\\Job-1.odb', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 1032, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 154.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 31.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Mon Aug 11 14:56:02 2025', 
+    'jobName': 'Job-1'})
+# Save by mmahd on 2025_08_11-14.57.46; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_11-14.57.48; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_11-14.57.48; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_11-14.57.48; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_11-14.57.48; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_11-14.57.48; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_11-14.57.48; build 2023 2022_09_28-21.41.55 183150
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=10)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=10)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=10)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 7472, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 34.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:33:21 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=20)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=20)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=20)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=30)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=30)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=30)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '961 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 11140, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 638.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 107.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:45:03 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=35)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=35)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=35)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '1296 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 9756, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 1170.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 181.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:46:15 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1fb ]', ), ), number=40)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=40)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=40)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '1681 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 4452, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 1896.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 276.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:47:30 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=45)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=45)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1fb ]', ), ), number=45)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '2116 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 7268, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 3053.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 429.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:49:14 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=35)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=35)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=35)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '1296 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 7532, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 1170.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 181.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:50:32 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=50)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=50)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=50)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '2601 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 19908, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 4500.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 607.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:52:07 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=55)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=55)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=55)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '3136 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 16924, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 6638.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 870.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:53:46 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=60)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=60)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=60)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '3721 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 11512, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 9157.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 1171.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 18:55:39 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=70)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=70)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=70)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '5041 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 5232, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 14554.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 1651.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 19:00:06 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=80)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=80)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=80)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '6561 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 18256, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 16010.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 2159.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 19:17:28 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=90)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=90)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=90)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '8281 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 20596, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 16010.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 2681.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 19:43:23 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=100)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=55)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=55)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=100)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+# Save by mmahd on 2025_08_12-19.49.32; build 2023 2022_09_28-21.41.55 183150
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Left Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Left Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Left Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Left Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=40)
+mdb.models['Model-1'].parts['Left Grip'].generateMesh()
+mdb.models['Model-1'].parts['Right Grip'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Right Grip'].faces.getSequenceFromMask((
+    '[#7 ]', ), ))
+mdb.models['Model-1'].parts['Right Grip'].seedEdgeByNumber(constraint=FINER, 
+    edges=mdb.models['Model-1'].parts['Right Grip'].edges.getSequenceFromMask((
+    '[#1ff ]', ), ), number=40)
+mdb.models['Model-1'].parts['Right Grip'].generateMesh()
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#1fe ]', ), ), number=40)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '4141 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '13590 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 17252, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 4830.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 599.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 20:11:13 2025', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].parts['Triangle Bar'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Triangle Bar'].cells.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Triangle Bar'].seedEdgeByNumber(constraint=FINER, 
+    edges=
+    mdb.models['Model-1'].parts['Triangle Bar'].edges.getSequenceFromMask((
+    '[#bb ]', ), ), number=40)
+mdb.models['Model-1'].parts['Triangle Bar'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF9 AND ASSEMBLY__PICKEDSURF8 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OVERCONSTRAINT CHECKS: THE *TIE PAIR BETWEEN SURFACES ASSEMBLY__PICKEDSURF11 AND ASSEMBLY__PICKEDSURF10 ATTEMPTS TO TIE ONE DEFORMABLE AND ONE RIGID BODY. SINCE THE *TIE SECONDARY SURFACE BELONGS IN PART OR ENTIRELY TO THE RIGID BODY, THE NODES ON THIS SURFACE WOULD BE OVERCONSTRAINED  BY THE *RIGID BODY AND *TIE COMBINATION. THE SECONDARY AND MAIN ARE SWITCHED SO THAT OVERCONSTRAINTS ARE AVOIDED.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF8,ASSEMBLY__PICKEDSURF9) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF8-ASSEMBLY__PICKEDSURF9), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'PLEASE MAKE SURE THAT THE MESH DENSITY OF THE SECONDARY SURFACE IN THE TIE PAIR (ASSEMBLY__PICKEDSURF10,ASSEMBLY__PICKEDSURF11) IS FINER THAN THE MAIN SURFACE.  THE ANALYSIS MAY RUN SLOWER, MAY YIELD INACCURATE RESULTS, AND MAY REQUIRE MORE MEMORY IF THIS IS NOT THE CASE.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY__PICKEDSURF10-ASSEMBLY__PICKEDSURF11), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '1681 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'One or more kinematic COUPLING constraint(s) have all or some of the nodes associated with each constraint belonging to rigid bodies. The COUPLING constraint(s) will not be applied at the nodes that belong to the rigid bodies. The nodes for which the COUPLING constraint(s) will not be enforced have been identified in node set WarnNodeOverconKCInRbd.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\mmahd\\OneDrive\\Desktop\\FEM Project\\Triangle\\Abaqus\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'Mahdi', 'handle': 16300, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 1896.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16171.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 276.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 1, 'phase': STANDARD_PHASE, 
+    'equilibrium': 1})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Tue Aug 12 20:12:53 2025', 
+    'jobName': 'Job-1'})
+# Save by mmahd on 2025_08_12-20.14.14; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_12-20.14.14; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_12-20.14.15; build 2023 2022_09_28-21.41.55 183150
+# Save by mmahd on 2025_08_12-20.14.15; build 2023 2022_09_28-21.41.55 183150
